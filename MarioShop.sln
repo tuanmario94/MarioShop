@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioShop.Common", "MarioShop.Common\MarioShop.Common.csproj", "{A34B12DB-305A-49C2-9936-54D8DFE800E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioShop.Model", "MarioShop.Model\MarioShop.Model.csproj", "{7FA482EC-D0C6-46BE-AFF8-32AB4C0C2B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioShop.Data", "MarioShop.Data\MarioShop.Data.csproj", "{6686703A-4C57-4DB0-A0A6-F20D1D126250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioShop.Service", "MarioShop.Service\MarioShop.Service.csproj", "{0133C1FD-E265-4D59-8195-FC47081935E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioShop.UnitTest", "MarioShop.UnitTest\MarioShop.UnitTest.csproj", "{3D2DED2F-9F55-4E35-B53E-A49A51C998A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioShop.Web", "MarioShop.Web\MarioShop.Web.csproj", "{55B0A3EF-755B-4562-8749-2D44043D5CC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A34B12DB-305A-49C2-9936-54D8DFE800E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34B12DB-305A-49C2-9936-54D8DFE800E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34B12DB-305A-49C2-9936-54D8DFE800E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34B12DB-305A-49C2-9936-54D8DFE800E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA482EC-D0C6-46BE-AFF8-32AB4C0C2B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA482EC-D0C6-46BE-AFF8-32AB4C0C2B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA482EC-D0C6-46BE-AFF8-32AB4C0C2B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA482EC-D0C6-46BE-AFF8-32AB4C0C2B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6686703A-4C57-4DB0-A0A6-F20D1D126250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6686703A-4C57-4DB0-A0A6-F20D1D126250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6686703A-4C57-4DB0-A0A6-F20D1D126250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6686703A-4C57-4DB0-A0A6-F20D1D126250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0133C1FD-E265-4D59-8195-FC47081935E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0133C1FD-E265-4D59-8195-FC47081935E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0133C1FD-E265-4D59-8195-FC47081935E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0133C1FD-E265-4D59-8195-FC47081935E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2DED2F-9F55-4E35-B53E-A49A51C998A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2DED2F-9F55-4E35-B53E-A49A51C998A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2DED2F-9F55-4E35-B53E-A49A51C998A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2DED2F-9F55-4E35-B53E-A49A51C998A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B0A3EF-755B-4562-8749-2D44043D5CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B0A3EF-755B-4562-8749-2D44043D5CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B0A3EF-755B-4562-8749-2D44043D5CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B0A3EF-755B-4562-8749-2D44043D5CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8CBF29A-E36D-4720-A2CF-4AC304A8CFE4}
+	EndGlobalSection
+EndGlobal
