@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarioShop.Model.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,33 +9,22 @@ using System.Threading.Tasks;
 
 namespace MarioShop.Model.Models
 {
-    [Table("Menus")]
-    public class Menu
+    [Table("Pages")]
+    public class Page : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(256)]
         public string Name { set; get; }
 
-        [Required]
+        [Column(TypeName = "varchar")]
         [MaxLength(256)]
-        public string URL { set; get; }
-
-        public int? DisplayOrder { set; get; }
-
         [Required]
-        public int GroupID { set; get; }
+        public string Alias { set; get; }
 
-        [ForeignKey("GroupID")]
-        public virtual MenuGroup MenuGroup { set; get; }
-
-        [MaxLength(10)]
-        public string Target { set; get; }
-
-        [Required]
-        public bool Status { set; get; }
+        public string Content { set; get; }
     }
 }
