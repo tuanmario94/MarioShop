@@ -25,6 +25,7 @@ namespace MarioShop.Data.Repositories
                         join pt in DbContext.PostTags
                         on p.ID equals pt.PostID
                         where pt.TagID == tag && p.Status
+                        //giảm dần
                         orderby p.CreatedDate descending
                         select p;
 
