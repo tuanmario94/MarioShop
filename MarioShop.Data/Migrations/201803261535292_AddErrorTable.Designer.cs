@@ -7,13 +7,13 @@ namespace MarioShop.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialDB : IMigrationMetadata
+    public sealed partial class AddErrorTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDB));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddErrorTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803191720040_InitialDB"; }
+            get { return "201803261535292_AddErrorTable"; }
         }
         
         string IMigrationMetadata.Source

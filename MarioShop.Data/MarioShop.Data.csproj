@@ -55,9 +55,13 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="MarioShopDbContext.cs" />
-    <Compile Include="Migrations\201803191720040_InitialDB.cs" />
-    <Compile Include="Migrations\201803191720040_InitialDB.Designer.cs">
-      <DependentUpon>201803191720040_InitialDB.cs</DependentUpon>
+    <Compile Include="Migrations\201803261337589_InitialDB.cs" />
+    <Compile Include="Migrations\201803261337589_InitialDB.Designer.cs">
+      <DependentUpon>201803261337589_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803261535292_AddErrorTable.cs" />
+    <Compile Include="Migrations\201803261535292_AddErrorTable.Designer.cs">
+      <DependentUpon>201803261535292_AddErrorTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,7 +84,9 @@
     <Compile Include="Repositories\VisitorStatisticRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,8 +100,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803191720040_InitialDB.resx">
-      <DependentUpon>201803191720040_InitialDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803261337589_InitialDB.resx">
+      <DependentUpon>201803261337589_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803261535292_AddErrorTable.resx">
+      <DependentUpon>201803261535292_AddErrorTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

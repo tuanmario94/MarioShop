@@ -22,6 +22,7 @@ namespace MarioShop.Web.Api
         }
 
         // POST api/<controller>
+        // [FromBody] - Don't receive from url
         public void Post([FromBody]string value)
         {
         }
