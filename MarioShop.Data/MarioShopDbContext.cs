@@ -1,4 +1,5 @@
 ﻿using MarioShop.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MarioShop.Data
 {
-    public class MarioShopDbContext : DbContext
+    public class MarioShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public MarioShopDbContext() : base("MarioShopConnection")
         {
@@ -35,9 +36,16 @@ namespace MarioShop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         public DbSet<Error> Errors { set; get; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public static MarioShopDbContext Create()
         {
-            
+            return new MarioShopDbContext();
+        }
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
+            builder.Entity<IdentityRole>().ToTable("ApplicationRoles");
+            builder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("ApplicationUserClaims");
         }
     }
 }
