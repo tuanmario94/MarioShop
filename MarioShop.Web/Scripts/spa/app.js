@@ -4,18 +4,22 @@ var myApp = angular.module('myModule', []);
 
 
 myApp.controller("schoolController", schoolController);
-myApp.service("Validator", Validator);
+myApp.directive("marioShopDirective", marioShopDirective);
 
+
+myApp.service("validatorService", validatorService);
+
+schoolController.$inject = ['$scope', 'validatorService']
 //declare
-function schoolController($scope, Validator) {
-   
+function schoolController($scope, validatorService) {
+
     $scope.checkNumber = function () {
-        $scope.message = Validator.checkNumber($scope.num);
+        $scope.message = validatorService.checkNumber($scope.num);
     }
     $scope.num = 1;
 }
 
-function Validator($window) {
+function validatorService($window) {
     return {
         //Name of value return don't need same the name of method
         checkNumber: checkNumber
@@ -26,5 +30,12 @@ function Validator($window) {
         }
         else
             return 'This is odd';
+    }
+}
+
+function marioShopDirective() {
+    return {
+        restrict: "A",
+        templateUrl: "/Scripts/spa/marioShopDirective.html"
     }
 }
