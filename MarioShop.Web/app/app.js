@@ -2,7 +2,12 @@
 
 
 (function () {
-    angular.module('marioshop', ['marioshop.products','marioshop.common']).config(config);
+    angular.module('marioshop', [
+        'marioshop.products',
+        'marioshop.product_categories',
+        'marioshop.common'
+
+    ]).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
     function config($stateProvider, $urlRouterProvider) {
