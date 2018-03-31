@@ -2,17 +2,29 @@
 
 var myApp = angular.module('myModule', []);
 
-myApp.controller("studentController", studentController);
-myApp.controller("teacherController", teacherController);
+
 myApp.controller("schoolController", schoolController);
+myApp.service("Validator", Validator);
+
 //declare
-function studentController($scope) {
-    //$scope.message = "This is my message from studentController";
-}
-function teacherController($scope) {
-    //$scope.message = "This is my message from teacherController";
+function schoolController($scope, Validator) {
+   
+    $scope.checkNumber = function () {
+        $scope.message = Validator.checkNumber($scope.num);
+    }
+    $scope.num = 1;
 }
 
-function schoolController($scope) {
-    $scope.message = "Announce from school!";
+function Validator($window) {
+    return {
+        //Name of value return don't need same the name of method
+        checkNumber: checkNumber
+    }
+    function checkNumber(input) {
+        if (input % 2 == 0) {
+            return 'This is even';
+        }
+        else
+            return 'This is odd';
+    }
 }
