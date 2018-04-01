@@ -7,15 +7,15 @@
         $scope.productCategories = [];
         $scope.page = 0;
         $scope.pagesCount = 0;
-        $scope.getProductCagories = getProductCagories;
+        $scope.getProductCategories = getProductCategories;
         $scope.keyword = '';
 
         $scope.search = search;
 
         function search() {
-            getProductCagories();
+            getProductCategories();
         }
-        function getProductCagories(page) {
+        function getProductCategories(page) {
             page = page || 0;
             var config = {
                 params: {
@@ -37,6 +37,6 @@
             });
         }
 
-        $scope.getProductCagories();
+        $scope.getProductCategories();
     }
 })(angular.module('marioshop.product_categories'));
