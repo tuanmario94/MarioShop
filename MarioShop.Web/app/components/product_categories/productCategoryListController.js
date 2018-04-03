@@ -21,7 +21,7 @@
                         id: id
                     }
                 }
-                apiService.del('api/productcategory/delete', config, function () {
+                apiService.del('/api/productcategory/delete', config, function () {
                     notificationService.displaySuccess('Xóa thành công');
                     search();
                 }, function () {
