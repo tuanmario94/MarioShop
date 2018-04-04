@@ -89,7 +89,7 @@ namespace MarioShop.Web.Api
         [Route("create")]
         [HttpPost]
         [AllowAnonymous]
-        public HttpResponseMessage Create(HttpRequestMessage request, ProductViewModel productVm)
+        public HttpResponseMessage Create(HttpRequestMessage request, ProductViewModel productCategoryVm)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -101,7 +101,7 @@ namespace MarioShop.Web.Api
                 else
                 {
                     var newProduct = new Product();
-                    newProduct.UpdateProduct(productVm);
+                    newProduct.UpdateProduct(productCategoryVm);
                     newProduct.CreatedDate = DateTime.Now;
                     _productService.Add(newProduct);
                     _productService.Save();
@@ -158,10 +158,10 @@ namespace MarioShop.Web.Api
                 }
                 else
                 {
-                    var oldproduct = _productService.Delete(id);
+                    var oldProductCategory = _productService.Delete(id);
                     _productService.Save();
 
-                    var responseData = Mapper.Map<Product, ProductViewModel>(oldproduct);
+                    var responseData = Mapper.Map<Product, ProductViewModel>(oldProductCategory);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
 
@@ -182,15 +182,15 @@ namespace MarioShop.Web.Api
                 }
                 else
                 {
-                    var listproduct = new JavaScriptSerializer().Deserialize<List<int>>(checkedProducts);
-                    foreach (var item in listproduct)
+                    var listProductCategory = new JavaScriptSerializer().Deserialize<List<int>>(checkedProducts);
+                    foreach (var item in listProductCategory)
                     {
                         _productService.Delete(item);
                     }
 
                     _productService.Save();
 
-                    response = request.CreateResponse(HttpStatusCode.OK, listproduct.Count);
+                    response = request.CreateResponse(HttpStatusCode.OK, listProductCategory.Count);
                 }
 
                 return response;

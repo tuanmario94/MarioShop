@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('marioshop.common', ['ui.router', 'ngBootbox'])
+    angular.module('marioshop.common', ['ui.router', 'ngBootbox','ngCkeditor'])
 })(); 
