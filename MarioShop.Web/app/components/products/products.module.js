@@ -8,7 +8,8 @@
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function config($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('products', {
+        $stateProvider
+        .state('products', {
             url: "/products",
             templateUrl: "/app/components/products/productListView.html",
             controller: "productListController"
