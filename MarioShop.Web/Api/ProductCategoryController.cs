@@ -16,6 +16,7 @@ using System.Web.Script.Serialization;
 namespace MarioShop.Web.Api
 {
     [RoutePrefix("api/productcategory")]
+    [Authorize]
     public class ProductCategoryController : ApiControllerBase
     {
         #region Initialize
@@ -168,7 +169,6 @@ namespace MarioShop.Web.Api
                 return response;
             });
         }
-
         [Route("deletemulti")]
         [HttpDelete]
         [AllowAnonymous]
