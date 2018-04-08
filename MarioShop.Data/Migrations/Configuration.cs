@@ -1,5 +1,6 @@
 ﻿namespace MarioShop.Data.Migrations
 {
+    using MarioShop.Common;
     using MarioShop.Model.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
@@ -62,6 +63,13 @@
                 context.SaveChanges();
             }
 
+        }
+        private void CreateFooter(MarioShopDbContext context)
+        {
+            if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
+            {
+                string content = "";
+            }
         }
     }
 }
