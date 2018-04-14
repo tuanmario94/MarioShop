@@ -29,26 +29,7 @@ namespace MarioShop.Web.Infrastructure.Extensions
             postCategory.Status = postCategoryVm.Status;
 
         }
-        public static void UpdateProductCategory(this ProductCategory productCategory, ProductCategoryViewModel productCategoryVm)
-        {
-            productCategory.ID = productCategoryVm.ID;
-            productCategory.Name = productCategoryVm.Name;
-            productCategory.Description = productCategoryVm.Description;
-            productCategory.Alias = productCategoryVm.Alias;
-            productCategory.ParentID = productCategoryVm.ParentID;
-            productCategory.DisplayOrder = productCategoryVm.DisplayOrder;
-            productCategory.Image = productCategoryVm.Image;
-            productCategory.HomeFlag = productCategoryVm.HomeFlag;
 
-            productCategory.CreatedDate = productCategoryVm.CreatedDate;
-            productCategory.CreatedBy = productCategoryVm.CreatedBy;
-            productCategory.UpdatedDate = productCategoryVm.UpdatedDate;
-            productCategory.UpdatedBy = productCategoryVm.UpdatedBy;
-            productCategory.MetaKeyword = productCategoryVm.MetaKeyword;
-            productCategory.MetaDescription = productCategoryVm.MetaDescription;
-            productCategory.Status = productCategoryVm.Status;
-
-        }
         public static void UpdatePost(this Post post, PostViewModel postVm)
         {
             post.ID = postVm.ID;
@@ -68,6 +49,27 @@ namespace MarioShop.Web.Infrastructure.Extensions
             post.MetaKeyword = postVm.MetaKeyword;
             post.MetaDescription = postVm.MetaDescription;
             post.Status = postVm.Status;
+        }
+
+        public static void UpdateProductCategory(this ProductCategory productCategory, ProductCategoryViewModel productCategoryVm)
+        {
+            productCategory.ID = productCategoryVm.ID;
+            productCategory.Name = productCategoryVm.Name;
+            productCategory.Description = productCategoryVm.Description;
+            productCategory.Alias = productCategoryVm.Alias;
+            productCategory.ParentID = productCategoryVm.ParentID;
+            productCategory.DisplayOrder = productCategoryVm.DisplayOrder;
+            productCategory.Image = productCategoryVm.Image;
+            productCategory.HomeFlag = productCategoryVm.HomeFlag;
+
+            productCategory.CreatedDate = productCategoryVm.CreatedDate;
+            productCategory.CreatedBy = productCategoryVm.CreatedBy;
+            productCategory.UpdatedDate = productCategoryVm.UpdatedDate;
+            productCategory.UpdatedBy = productCategoryVm.UpdatedBy;
+            productCategory.MetaKeyword = productCategoryVm.MetaKeyword;
+            productCategory.MetaDescription = productCategoryVm.MetaDescription;
+            productCategory.Status = productCategoryVm.Status;
+
         }
 
         public static void UpdateProduct(this Product product, ProductViewModel productVm)
@@ -95,6 +97,7 @@ namespace MarioShop.Web.Infrastructure.Extensions
             product.MetaDescription = productVm.MetaDescription;
             product.Status = productVm.Status;
             product.Tags = productVm.Tags;
+            product.Quantity = productVm.Quantity;
         }
     }
 }
