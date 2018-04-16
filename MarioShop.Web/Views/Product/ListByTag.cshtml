@@ -1,8 +1,9 @@
-﻿@model MarioShop.Web.Infrastructure.Core.PaginationSet<MarioShop.Web.Models.ProductViewModel>
+﻿
+@model MarioShop.Web.Infrastructure.Core.PaginationSet<MarioShop.Web.Models.ProductViewModel>
 
 @{
-    var keyword = (string)ViewBag.Keyword;
-    ViewBag.Title = "Kết quả tìm kiếm cho từ khóa " + keyword;
+    var tag = (MarioShop.Web.Models.TagViewModel)ViewBag.Tag;
+    ViewBag.Title = "Kết quả tìm kiếm cho tag " + tag.Name;
     Layout = "~/Views/Shared/Layouts.cshtml";
 }
 <div class="women-product">
@@ -10,15 +11,8 @@
     {
         <div class="w_content">
             <div class="women">
-                <a href=""><h4>Kết quả tìm kiếm: @keyword - <span>@Model.TotalCount sản phẩm</span> </h4></a>
-                <ul class="w_nav">
-                    <li>Sắp xếp : </li>
-                    <li><a class="active" href="?page=@Model.Page&sort=popular">Phổ biến</a></li> |
-                    <li><a href="?page=@Model.Page&sort=new">Mới </a></li> |
-                    <li><a href="?page=@Model.Page&sort=discount">Khuyến mãi</a></li> |
-                    <li><a href="?page=@Model.Page&sort=price">Giá: Thấp -> Cao </a></li>
-                    <div class="clearfix"> </div>
-                </ul>
+                <a href=""><h4>Tag: @tag.Name - <span>@Model.TotalCount sản phẩm</span> </h4></a>
+
                 <div class="clearfix"> </div>
             </div>
         </div>
@@ -26,7 +20,7 @@
         <div class="grid-product">
             @foreach (var product in Model.Items)
             {
-                var url = "/" + product.Alias + ".p-" + product.ID +".html";
+                var url = "/" + product.Alias + ".p-" + product.ID+".html";
                 <div class="product-grid">
                     <div class="content_box">
                         <a href="@url">
