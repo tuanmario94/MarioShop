@@ -99,5 +99,14 @@ namespace MarioShop.Web.Infrastructure.Extensions
             product.Tags = productVm.Tags;
             product.Quantity = productVm.Quantity;
         }
+
+        public static void UpdateFeedback(this Feedback feedback, FeedbackViewModel feedbackVM)
+        {
+            feedback.Name = feedbackVM.Name;
+            feedback.Email = feedbackVM.Email;
+            feedback.Message = feedback.Message;
+            feedback.Status = feedbackVM.Status;
+            feedback.CreatedDate = DateTime.Now;
+        }
     }
 }
