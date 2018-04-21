@@ -22,7 +22,7 @@
         protected override void Seed(MarioShop.Data.MarioShopDbContext context)
         {
             CreateProductCategorySample(context);
-
+            CreateContactDetail(context);
         }
         private void CreateProductCategorySample(MarioShop.Data.MarioShopDbContext context)
         {
@@ -125,6 +125,42 @@
 
                     };
                     context.Pages.Add(page);
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Trace.WriteLine($"Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation error.");
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Trace.WriteLine($"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
+                        }
+                    }
+                }
+
+            }
+        }
+        private void CreateContactDetail(MarioShopDbContext context)
+        {
+            if (context.ContactDetails.Count() == 0)
+            {
+                try
+                {
+                    var contactDetail = new MarioShop.Model.Models.ContactDetail()
+                    {
+                        Name = "Shop thời trang Mario",
+                        Address = "Thái Nguyên",
+                        Email = "mario@gmail.com",
+                        Lat = 21.662294,
+                        Lng = 105.885861,
+                        Phone = "01683876111",
+                        Website = "http://mario.com.vn",
+                        Other = "",
+                        Status = true
+
+                    };
+                    context.ContactDetails.Add(contactDetail);
                     context.SaveChanges();
                 }
                 catch (DbEntityValidationException ex)
