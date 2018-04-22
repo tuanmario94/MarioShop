@@ -37,6 +37,13 @@ namespace MarioShop.Web
             );
 
             routes.MapRoute(
+                name: "Register",
+                url: "dang-ky.html",
+                defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional },
+                namespaces: new string[] { "MarioShop.Web.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Page",
                 url: "trang/{alias}.html",
                 defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
