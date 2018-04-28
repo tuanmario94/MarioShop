@@ -9,6 +9,7 @@
             $state.go('login');
         }
         $scope.authentication = authData.authenticationData;
+
         //authenticationService.validateRequest();
     }
 })(angular.module('marioshop'));

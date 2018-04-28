@@ -43,6 +43,12 @@ namespace MarioShop.Model.Models
         public string PaymentStatus { set; get; }
         public bool Status { set; get; }
 
+        [StringLength(128)]
+        [Column(TypeName="nvarchar")]
+        public string CustomerId { set; get; }
+
+        [ForeignKey("CustomerId")]
+        public ApplicationUser User { set; get; }
         public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }
 }
