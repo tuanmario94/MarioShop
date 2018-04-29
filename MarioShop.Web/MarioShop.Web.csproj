@@ -244,7 +244,7 @@
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Models\ApplicationGroupViewModel.cs" />
     <Compile Include="Models\ApplicationRoleViewModel.cs" />
-    <Compile Include="Models\ApplicationUserView.cs" />
+    <Compile Include="Models\ApplicationUserViewModel.cs" />
     <Compile Include="Models\ContactDetailViewModel.cs" />
     <Compile Include="Models\FeedBackViewModel.cs" />
     <Compile Include="Models\FooterViewModel.cs" />
