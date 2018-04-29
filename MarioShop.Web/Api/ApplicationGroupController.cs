@@ -18,7 +18,7 @@ using System.Web.Script.Serialization;
 namespace MarioShop.Web.Api
 {
     [RoutePrefix("api/applicationGroup")]
-    [Authorize]
+    [Authorize(Roles = "LoginAdminPage")]
     public class ApplicationGroupController : ApiControllerBase
     {
         private IApplicationGroupService _appGroupService;

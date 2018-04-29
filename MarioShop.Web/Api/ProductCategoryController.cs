@@ -16,7 +16,7 @@ using System.Web.Script.Serialization;
 namespace MarioShop.Web.Api
 {
     [RoutePrefix("api/productcategory")]
-    [Authorize]
+    [Authorize(Roles = "LoginAdminPage")]
     public class ProductCategoryController : ApiControllerBase
     {
         #region Initialize

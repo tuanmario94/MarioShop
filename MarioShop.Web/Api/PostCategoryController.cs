@@ -14,7 +14,7 @@ using System.Web.Http;
 namespace MarioShop.Web.Api
 {
     [RoutePrefix("api/postcategory")]
-    [Authorize]
+    [Authorize(Roles = "LoginAdminPage")]
     public class PostCategoryController : ApiControllerBase
     {
         IPostCategoryService _postCategoryService;

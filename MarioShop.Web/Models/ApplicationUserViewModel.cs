@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ namespace MarioShop.Web.Models
         public string UserName { set; get; }
 
         public string PhoneNumber { set; get; }
-
+        [IgnoreMap]
         public IEnumerable<ApplicationGroupViewModel> Groups { set; get; }
     }
 }

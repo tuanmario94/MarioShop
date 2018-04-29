@@ -16,7 +16,7 @@ using System.Web.Script.Serialization;
 namespace MarioShop.Web.Api
 {
     [RoutePrefix("api/applicationRole")]
-    [Authorize]
+    [Authorize(Roles = "LoginAdminPage")]
     public class ApplicationRoleController : ApiControllerBase
     {
         private IApplicationRoleService _appRoleService;

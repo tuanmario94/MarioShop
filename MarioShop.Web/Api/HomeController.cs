@@ -10,7 +10,7 @@ using System.Web.Http;
 namespace MarioShop.Web.Api
 {
     [RoutePrefix("api/home")]
-    [Authorize]
+    [Authorize(Roles = "LoginAdminPage")]
     public class HomeController : ApiControllerBase
     {
         IErrorService _errorService;

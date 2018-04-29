@@ -18,6 +18,7 @@ namespace MarioShop.Web.Api
 {
     [Authorize]
     [RoutePrefix("api/applicationUser")]
+    [Authorize(Roles = "LoginAdminPage")]
     public class ApplicationUserController : ApiControllerBase
     {
         private ApplicationUserManager _userManager;
