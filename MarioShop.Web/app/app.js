@@ -3,14 +3,17 @@
 
 (function () {
     angular.module('marioshop',
-    [
-        'marioshop.products',
-        'marioshop.product_categories',
-        'marioshop.common'
-
-    ]).config(config);
+        ['marioshop.products',
+            'marioshop.application_groups',
+            'marioshop.product_categories',
+            'marioshop.application_roles',
+            'marioshop.application_users',
+            'marioshop.common'])
+        .config(config)
+        .config(configAuthentication);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
+
     function config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('base', {
@@ -30,6 +33,7 @@
             });
         $urlRouterProvider.otherwise('/login');
     }
+
     function configAuthentication($httpProvider) {
         $httpProvider.interceptors.push(function ($q, $location) {
             return {

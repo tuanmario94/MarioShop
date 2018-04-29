@@ -16,7 +16,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(MarioShop.Data.MarioShopDbContext context)
@@ -189,5 +189,7 @@
 
             }
         }
+
+
     }
 }
