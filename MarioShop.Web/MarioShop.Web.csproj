@@ -5498,6 +5498,8 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarioShop.Common\MarioShop.Common.csproj">
