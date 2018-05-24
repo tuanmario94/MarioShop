@@ -167,6 +167,10 @@ namespace MarioShop.Web.Api
                     var listUserInGroup = _appGroupService.GetListUserByGroupId(appGroup.ID);
                     foreach (var user in listUserInGroup)
                     {
+                        // remove all role
+                        var roles = await _userManager.GetRolesAsync(user.Id);
+                        await _userManager.RemoveFromRolesAsync(user.Id, roles.ToArray());
+
                         var listRoleName = listRole.Select(x => x.Name).ToArray();
                         foreach (var roleName in listRoleName)
                         {

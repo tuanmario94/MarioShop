@@ -19,11 +19,6 @@ namespace MarioShop.Web.Api
             this._errorService = errorService;
         }
 
-        [HttpGet]
-        [Route("TestMethod")]
-        public string TestMethod()
-        {
-            return "Hello, Mario Member. ";
-        }
+
     }
 }

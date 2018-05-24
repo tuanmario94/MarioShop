@@ -9,20 +9,20 @@
         @using (Html.BeginForm("Login", "Account", new { returnUrl = @ViewBag.ReturnUrl }, FormMethod.Post))
         {
             @Html.ValidationSummary(false, "", new { @class = "error" })
-            <div>
+            <div style="width:610px;">
                 <span>Tài khoản<label>*</label></span>
                 @Html.TextBoxFor(model => model.UserName)
             </div>
             <div>
-                <span>Password<label>*</label></span>
+                <span>Mật khẩu<label>*</label></span>
                 @Html.PasswordFor(model => model.Password)
             </div>
             <div>
                 @Html.CheckBoxFor(model => model.RememberMe)
                 Nhớ mật khẩu?
             </div>
-            <a class="forgot" href="#">Forgot Your Password?</a>
-            <input type="submit" value="Login">
+            @*<a class="forgot" href="#">Forgot Your Password?</a>*@
+            <input type="submit" value="Đăng nhập">
         }
     </div>
     <div class="login-left">

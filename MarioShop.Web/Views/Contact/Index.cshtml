@@ -52,7 +52,7 @@
             <h4 class="m_3">Họ tên:</h4>
             @Html.TextBoxFor(model => model.Name, new { @class = "textbox"@*, @placeholder ="Họ tên:"*@});
             <h4 class="m_3">Email:</h4>
-            @Html.TextBoxFor(model => model.Email, new { @class = "textbox" });
+            @Html.TextBoxFor(model => model.Email, new { @class = "textbox", @Type="email" });
             <h4 class="m_3">Tin nhắn:</h4>
             @Html.TextAreaFor(model => model.Message);
 
