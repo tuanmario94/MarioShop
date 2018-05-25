@@ -5063,7 +5063,6 @@
     <Content Include="Assets\client\images\facebook.png" />
     <Content Include="Assets\client\images\gpluse.png" />
     <Content Include="Assets\client\images\img-sprite.png" />
-    <Content Include="Assets\client\images\label_new.png" />
     <Content Include="Assets\client\images\logo-mario.png" />
     <Content Include="Assets\client\images\logo.png" />
     <Content Include="Assets\client\images\pi.jpg" />

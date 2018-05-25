@@ -30,3 +30,13 @@
     border: none;
     outline: none;
 }
+
+.related-product{
+    height:100px;
+    width:50px;
+}
+.product-category {
+    height: 180px;
+    width: 100px;
+    position: center;
+}
